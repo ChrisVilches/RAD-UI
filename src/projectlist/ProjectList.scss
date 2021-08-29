@@ -1,0 +1,44 @@
+@import "../scss/colors.scss";
+@import "../scss/dimensions.scss";
+
+$filter-form-height: 30px;
+
+.project-list-item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  height: auto;
+  border-bottom: 1px solid $separator-border-color;
+}
+
+.project-list-item-information{
+  font-size: $small-text-font-size;
+  color: $less-important-text-color;
+}
+
+.project-list-item-description{
+  font-size: $small-text-font-size;
+}
+
+.project-list-item-lock{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.project-list-item-toolbar{
+  float: right;
+}
+
+.project-list-item-star{
+  background-color: transparent;
+  border: 0;
+  transition: 0.3s;
+  color: $project-list-star-unmarked-color;
+  &:hover, &:focus, &:active{
+    outline: none;
+  }
+}
+
+.project-list-item-star-marked{
+  color: $project-list-star-marked-color;
+}

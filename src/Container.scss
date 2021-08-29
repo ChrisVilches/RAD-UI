@@ -1,0 +1,13 @@
+/*
+TODO Not entirely sure why do I have to put !important otherwise it doesn't work.
+*/
+
+.Container {
+  border-left: 5px solid #ced4da;
+  padding-right: 0!important;
+}
+
+.root-container{
+  border: 0;
+  padding-left: 0!important;
+}

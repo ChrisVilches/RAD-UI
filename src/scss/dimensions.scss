@@ -1,0 +1,20 @@
+$sidebar-width: 250px;
+$sidebar-footer-widget-height: 80px;
+$sidebar-content-padding: 10px;
+$sidebar-scrollable-widget-max-height: 200px;
+$navbar-height: 50px;
+$footer-height: 40px;
+$extra-content-padding: 20px;
+$small-text-font-size: 0.8em;
+$default-border-radius: 5px;
+$default-border-radius-sm: $default-border-radius * 0.8;
+
+/******** Project menu ********/
+
+$project-menu-item-height: 45px;
+/* If this vertical padding is too small, the shadow of the icon buttons will cover the bottom-border */
+$project-menu-content-vertical-padding: 10px;
+$project-menu-height: $project-menu-item-height + (2 * $project-menu-content-vertical-padding);
+$project-menu-circle-size: 25px;
+
+/******** End of Project menu ********/

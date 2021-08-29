@@ -1,0 +1,35 @@
+@import "../scss/colors.scss";
+@import "../scss/mixin.scss";
+@import "./widget.scss";
+@import "../scss/dimensions.scss";
+
+#navbar {
+  background-color: $layout-secondary-background-color;
+  height: $navbar-height;
+  padding-left: ($sidebar-width + $extra-content-padding)!important;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  a{
+    color: $layout-secondary-background-link-color;
+    &:hover{
+      color: $layout-secondary-background-link-color-hover;
+    }
+  }
+}
+
+#content {
+  top: $navbar-height;
+  width: 100%;
+  position: absolute;
+  padding-top: 0;
+  padding-bottom: 0;
+  /* Some parts of the content (like the Project tool bar) don't have any padding */
+  padding-left: $sidebar-width;
+  padding-right: 0;
+  z-index: 1;
+}
+
+.padded-container{
+  padding: $extra-content-padding;
+}

@@ -1,0 +1,31 @@
+@import "./colors.scss";
+@import '../scss/dimensions.scss';
+
+.small-text{
+  color: $less-important-text-color;
+  font-size: $small-text-font-size;
+}
+
+.primary-link{
+  font-weight: bold;
+  color: $primary-link-color;
+  &:hover{
+    color: lighten($primary-link-color, 20)
+  }
+}
+
+$button-size: 2.4em;
+
+.generic-small-btn{
+  background-color: $btn-secondary-color;
+  font-size: 0.8em;
+  border: 0;
+  width: $button-size;
+  height: $button-size;
+  border-radius: $button-size/2;
+}
+
+.danger-btn{
+  color: #eee;
+  background-color: $danger-color;
+}

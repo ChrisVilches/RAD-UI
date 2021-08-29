@@ -1,0 +1,20 @@
+@import "../scss/dimensions.scss";
+
+$grid-margin: 5px;
+
+/* Override Bootstrap 4 column padding */
+.col, [class*="col-"]{
+  padding-left: $grid-margin!important;
+  padding-right: $grid-margin!important;
+}
+
+.grid-square-widget {
+  margin-bottom: $grid-margin * 2;
+}
+
+.grid-square-widget-content {
+  border: 1px solid #ddd;
+  border-radius: $default-border-radius-sm;
+  height: 100%;
+  padding: 10px;
+}

@@ -1,0 +1,125 @@
+@import '../scss/mixin';
+@import "../scss/colors.scss";
+@import "../scss/variables.scss";
+@import "../scss/dimensions.scss";
+
+/*
+This code is structured in the same way the layout is structured (i.e. nesting
+of CSS clases is the same as the nesting of <div>s in the HTML.)
+*/
+
+/*
+TODO: I modified this CSS code a lot, so try to clean it if possible, and remove unnecessary lines,
+if any. Also try to clean the HTML, if there's anything to clean.
+
+For example, using SCSS variables for some things would be great.
+*/
+
+.connection-item-content{
+  display: flex;
+  flex-direction: column;
+
+  .connection-item-top{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+
+    .connection-item-content-title{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+    }
+
+    .connection-item-content-toolbar{
+      div{
+        display: inline;
+      }
+      button{
+        background-color: transparent;
+        border: 0;
+        margin-left: 6px;
+        width: 25px;
+        height: 25px;
+        transition: 0.2s;
+        &:hover{
+          color: darken($less-important-text-color, $default-darken);
+        }
+      }
+    }
+  }
+
+  .connection-item-content-description-container{
+    /*
+    TODO:
+    For now removed scrollbar. It doesn't look perfect. Sometimes the text gets covered up (i.e. hidden)
+    and unreadable. The scrollbar is rarely necessary anyways. After a while, if it's decided to not
+    use scrollbars at all for the connection items, remove this comment and commented CSS rules here.
+    */
+    /* @include color-scroll($less-important-text-color); */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    min-height: 100px;
+    /* max-height: 200px; */
+
+    .connection-item-content-description-logo-container{
+      @include align-vertical;
+      justify-content: center;
+      display: flex;
+      flex: 1;
+      i{
+        font-size: 200%;
+        color: darken($less-important-text-color, $default-darken);
+      }
+    }
+
+    .connection-item-content-description-text{
+      @include align-vertical;
+      flex: 5;
+      padding: 5px;
+      /*
+      text-overflow: hidden;
+      overflow-y: auto;
+      */
+    }
+  }
+
+  .connection-item-content-footer-container{
+    @include align-vertical;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    .connection-item-content-footer-info{
+      flex: 1;
+      div{
+        display: inline;
+        margin-right: 15px;
+      }
+    
+      span{
+        margin-left: 5px;
+      }
+    }
+
+    .connection-item-content-footer-time-ago{
+      *{
+        color: $less-important-text-color;
+      }
+      span{
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.color-selector-preview{
+  display: block;
+  height: 100%;
+  border-radius: $default-border-radius;
+  &::before{
+    content: '.';
+    visibility: hidden;
+  }
+}

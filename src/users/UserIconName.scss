@@ -1,0 +1,44 @@
+@import '../scss/mixin.scss';
+
+$icon-size: 30px;
+$default-icon-color: #ddd;
+
+.default-user-icon-container{
+  @include align-vertical;
+  .default-user-icon{
+    margin-right: 10px;
+  }
+
+  .default-user-icon-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.default-user-icon{
+  @include align-vertical;
+  @include unselectable;
+  width: $icon-size;
+  height: $icon-size;
+  min-width: $icon-size;
+  min-height: $icon-size;
+  background-color: $default-icon-color;
+  border-radius: $icon-size/5;
+  /* TODO: Use some other font family? to make it look different from the rest. */
+  span {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.default-user-icon-color-0{ background-color: #D89F62; }
+.default-user-icon-color-1{ background-color: #A762D8; }
+.default-user-icon-color-2{ background-color: #6280D8; }
+.default-user-icon-color-3{ background-color: #D86262; }
+.default-user-icon-color-4{ background-color: #ADADAD; }
+.default-user-icon-color-5{ background-color: #87D862; }
+.default-user-icon-color-6{ background-color: #A9DEDA; }

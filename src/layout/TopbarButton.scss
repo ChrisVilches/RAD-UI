@@ -1,0 +1,38 @@
+@import "../scss/colors.scss";
+@import "../scss/dimensions.scss";
+
+$topbar-toolbar-button-size: 35px;
+$topbar-toolbar-nested-dot-size: 5px;
+
+.Topbar-Button{
+  button{
+    border: 0;
+    background-color: transparent;
+    color: $layout-secondary-background-link-color;
+    transition: 0.1s;
+    border-radius: $default-border-radius;
+    padding: 5px;
+    width: $topbar-toolbar-button-size;
+    height: $topbar-toolbar-button-size;
+    &:hover{
+      color: $layout-secondary-background-link-color-hover;
+      background-color: $layout-secondary-background-highlight-color;
+    }
+  
+    .Topbar-Button-nested-dot{
+      &::before{
+        content: '.';
+        visibility: hidden;
+      }
+      display: block;
+      margin-left: $topbar-toolbar-button-size/2;
+      position: absolute;
+      background-color: red;
+      
+      width: $topbar-toolbar-nested-dot-size;
+      height: $topbar-toolbar-nested-dot-size;
+      border-radius: $topbar-toolbar-nested-dot-size/2;
+  
+    }
+  }
+}

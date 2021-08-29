@@ -1,0 +1,73 @@
+@import "../scss/colors.scss";
+@import "../scss/dimensions.scss";
+@import "../scss/mixin.scss";
+
+#project-menu-wrapper{
+  position: fixed;
+  background-color: white;
+  /* Beware of Datatables, which has a very high z-index, so it gets covered up */
+  z-index: 1000;
+  width: 100%;
+}
+
+#project-menu{
+  border-bottom: 1px solid $separator-border-color;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: $project-menu-height;
+  padding: $project-menu-content-vertical-padding 0;
+}
+
+.project-menu-item{
+  @include align-vertical-inline-flex; /* Center link text vertically */
+  padding: 0 20px;
+  height: $project-menu-item-height;
+  border-right: 1px solid $separator-border-color;
+  a{
+    color: #444;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: $default-border-radius;
+    transition: 0.2s;
+    &:hover{
+      color: #888;
+      text-decoration: none;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.project-menu-item:last-child{
+  border-right: 0;
+}
+
+.project-menu-left-portion{
+  position: absolute;
+  z-index: 1;
+}
+
+.project-menu-right-portion{
+  box-shadow: -15px 0px 12px -9px #fff;
+  position: fixed;
+  right: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.active-tab{
+  a{
+    background-color: #fafafa;
+  }
+}
+
+.number-circle {
+  display: inline-block;
+  width: $project-menu-circle-size;
+  height: $project-menu-circle-size;
+  border-radius: 50%;
+  font-size: 13px;
+  color: #fff;
+  line-height: $project-menu-circle-size;
+  text-align: center;
+  background: #ccc;
+}

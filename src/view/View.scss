@@ -1,0 +1,83 @@
+@import '../scss/mixin';
+
+$query-title-bar-height: 2em;
+
+.query-item {
+  margin-bottom: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+
+  .query-edit-toolbar-content{
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  &:hover{
+    .query-edit-toolbar-content{
+      opacity: 1;
+    }
+  }
+}
+
+.execute-with-connection-label{
+  margin-bottom: 5px;
+}
+
+.query-container{
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.query-title-bar{
+  display: flex;
+}
+
+.query-title{
+  width: 100%;
+  height: $query-title-bar-height;
+}
+
+.query-edit-toolbar{
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.query-edit-toolbar-content{
+  float: right;
+}
+
+.query-edit-toolbar-btn{
+  margin-left: 10px;
+  padding: 0 0.5em;
+  display: inline-block;
+  font-size: $query-title-bar-height/2;
+  line-height: $query-title-bar-height;
+  height: $query-title-bar-height;
+  border-radius: 3px;
+  transition: 0.3s;
+  color: #555;
+  &:hover{
+    background-color: #555;
+    color: #dedede;
+  }
+}
+
+.readme-container-hidden{
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+$circle-size: 12px;
+
+.connection-label{
+  height: $circle-size;
+  width: $circle-size;
+  border-radius: $circle-size/2;
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid transparent;
+}

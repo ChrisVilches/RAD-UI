@@ -1,0 +1,19 @@
+@import "./colors.scss";
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+  background-color: $btn-primary-color !important;
+  border-color: $btn-primary-color !important;
+  &:hover{
+    background-color: lighten($btn-primary-color, 10) !important;
+    border-color: lighten($btn-primary-color, 10) !important;
+  }
+}
+
+.btn-secondary, .btn-secondary:active, .btn-secondary:visited {
+  background-color: $btn-secondary-color !important;
+  border-color: $btn-secondary-color !important;
+  &:hover{
+    background-color: darken($btn-secondary-color, 10) !important;
+    border-color: darken($btn-secondary-color, 10) !important;
+  }
+}

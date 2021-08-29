@@ -1,0 +1,21 @@
+$separator-border-color: #dedede;
+$less-important-text-color: #aaa;
+$sidebar-link-color: #E3E5E7;
+$sidebar-link-color-hover: lighten($sidebar-link-color, 3);
+$sidebar-background-color: #353A40;
+$sidebar-background-highlight-color: lighten($sidebar-background-color, 5);
+
+$layout-secondary-background-color: darken($sidebar-background-color, 15);
+$layout-secondary-background-link-color: #ddd;
+$layout-secondary-background-link-color-hover: lighten($layout-secondary-background-link-color, 50);
+$layout-secondary-background-highlight-color: #222;
+
+$btn-primary-color: #649764;
+$btn-secondary-color: #ddd;
+
+$project-list-star-unmarked-color: #eaeaea;
+$project-list-star-marked-color: #FFDC00;
+
+$primary-link-color: #3166C2;
+
+$danger-color: #ff7777;

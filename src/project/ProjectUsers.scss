@@ -1,0 +1,24 @@
+$dropdown-normal-color: #eee;
+$dropdown-margin: 5px;
+
+.dropdown{
+  display: inline-block;
+  margin-right: $dropdown-margin;
+  margin-bottom: $dropdown-margin;
+}
+
+.dropdown-normal{
+  button{
+    background-color: $dropdown-normal-color;
+    color: #555;
+    
+    &:hover, &:focus, &:active{
+      background-color: darken($dropdown-normal-color, 5);
+      color: #555;
+    }
+
+    &:disabled{
+      background-color: $dropdown-normal-color;
+    }
+  }
+}
